@@ -37,6 +37,37 @@ ol, ul {
 	list-style: none;
 }
 
+
+.circular--square {
+	border-radius: 100%;
+	margin: 0 3em 2em 0;
+	width: 22em;
+	overflow: hidden;
+}
+
+
+
+.play.fade { transition: all .2s ease-in-out; }
+
+
+.play:hover .play.fade {
+	opacity: 0.8;
+}
+.play:hover .play.icon {
+	opacity: 1;
+}
+.play.icon {
+	transition: .5s ease;
+	opacity: 0;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+
 blockquote, q {
 	quotes: none;
 }
@@ -2423,6 +2454,14 @@ input, select, textarea {
 			display: block;
 		}
 
+
+		
+
+		.image.zoom { transition: all .2s ease-in-out; }
+		.image.zoom:hover {
+			transform: scale(0.9);
+		}
+
 		.image.left, .image.right {
 			max-width: 40%;
 		}
@@ -3467,10 +3506,10 @@ input, select, textarea {
 				padding: 7em 0 8.25em 0;
 				background: rgb(43,15,84);
 				background: linear-gradient(180deg, rgba(43,15,84,1) 8%, rgba(73,231,236,1) 100%);
-				background-size: auto,
- cover;
-				background-position: center,
- center;
+				background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(43,15,84,1)), to(rgba(73,231,236,1)));
+				background-image: -moz-linear-gradient(#fff 0%, #3E9C9D 100%);
+				background-size: auto, cover;
+				background-position: center, center;
 				margin-bottom: -6.5em;
 			}
 
@@ -3577,8 +3616,8 @@ input, select, textarea {
 
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
-			background-color: #2e3141;
-			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+			background: rgb(43,15,84);
+			background: linear-gradient(180deg, rgba(43,15,84,1) 8%, rgba(73,231,236,1) 100%);
 			background-size: auto,
  cover;
 			background-position: center,
@@ -3695,6 +3734,8 @@ input, select, textarea {
 			margin: 0 auto;
 			width: 55em;
 		}
+
+		
 
 		.wrapper.style2 {
 			background-color: #353849;
@@ -3886,35 +3927,40 @@ input, select, textarea {
 				}
 
 			.wrapper.spotlight.style4 {
-				background-color: #39477c;
+				background: rgb(66,93,15);
+				background: linear-gradient(0deg, rgba(66,93,15,1) 0%, rgba(105,212,101,1) 100%);
 			}
 
-				.wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2339477c%3B' /%3E%3C/svg%3E");
+				.wrapper.spotlight.style4:before {
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(105,212,101,1)' /%3E%3C/svg%3E");
+				}
+				
+				.wrapper.spotlight.style4:after {
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(66,93,15,1)' /%3E%3C/svg%3E");
 				}
 
 				.wrapper.spotlight.style4:before {
-					box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
+					box-shadow: inset 0 -1px 0 0 rgba(105,212,101,1), 0 1px 0 0 rgba(105,212,101,1);
 				}
 
 				.wrapper.spotlight.style4:after {
-					box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
+					box-shadow: inset 0 -1px 0 0 rgba(66,93,15,1), 0 1px 0 0 rgba(66,93,15,1);
 				}
 
 			.wrapper.spotlight.style5 {
-				background-color: #324072;
+				background: rgb(37,39,52);
 			}
 
 				.wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23324072%3B' /%3E%3C/svg%3E");
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill: rgb(37,39,52)' /%3E%3C/svg%3E");
 				}
 
 				.wrapper.spotlight.style5:before {
-					box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
+					box-shadow: inset 0 -1px 0 0 rgb(37,39,52), 0 1px 0 0 rgb(37,39,52);
 				}
 
 				.wrapper.spotlight.style5:after {
-					box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
+					box-shadow: inset 0 -1px 0 0  rgb(37,39,52), 0 1px 0 0  rgb(37,39,52);
 				}
 
 			.wrapper.spotlight.style6 {
