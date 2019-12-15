@@ -131,7 +131,7 @@ input, select, textarea {
 
 	body {
 		background-color: #0f0917;
-		background-image: linear-gradient(#00ffb4,#0f0917 50%);
+		background-image: linear-gradient(#00ffb4,#0f0917 45%);
 		background-size: auto,
  cover;
 		background-attachment: fixed,
