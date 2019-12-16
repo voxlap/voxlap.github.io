@@ -3702,6 +3702,8 @@ input, select, textarea {
 		background-color: #0f0917;
 		margin: 6.5em 0;
 		position: relative;
+		display: flex; /*added*/
+  		flex-direction: column; 
 	}
 
 		.wrapper:before, .wrapper:after {
