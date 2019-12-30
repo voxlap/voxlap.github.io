@@ -46,26 +46,40 @@ html { scroll-behavior: smooth; }
 	overflow: hidden;
 }
 
+
+.footerStyle {
+	background: rgb(37,39,52);
+	background: linear-gradient(180deg, rgba(37,39,52,1) 34%, rgba(15,9,23,1) 90%);
+}
+
+.footerStyle:before {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgb(255,79,105)' /%3E%3C/svg%3E");
+}
+
+
 .grow {
 	background-color: #2e3141;
 	padding: 5px 5px 5px 5px;
 	border-radius: 10px;
-	height: 49px;
+	height: 2em;
 	width: 100%;
 	float: left;
 	position: relative;
-	max-height: 49px;
-	transition:max-height 0.5s cubic-bezier(0,1,0,1);
 	text-align: center;
+	transition: all .4s ease-in-out; 
 	overflow: hidden;
   }
 
 
-  .grow:hover{
-	max-height:9999px; 
-	height: auto;
-	transition:max-height 0.5s cubic-bezier(1,0,1,0);
+  .grow.article:hover {
+	height: 30em;
+	padding: 10px 10px 10px 10px;
   }
+
+  .grow:hover {
+	  height: 10em;
+  }
+
   .grow.image.left, .grow.image.right {
 	height: auto;
 	max-height: 9999px;
@@ -80,16 +94,47 @@ html { scroll-behavior: smooth; }
 	padding: 1em 1em 1em 1em;
   }
 
-.play.fade { transition: all .2s ease-in-out; }
+
+
+@keyframes playHoverAnim {
+  0%   {top: 50%;}
+  50%  {top: 60%;}
+  100% {top: 50%;}
+
+}
+@keyframes hoverShadowAnim {
+	0% {viewBox: "0 0 100 100";}
+	50% {viewBox: "0 0 120 120";}
+	100% {viewBox: "0 0 100 100";}
+
+}
+
+.shadow {
+	width: 100px;
+	transition: all .2s ease-in-out; 
+	float: bottom;
+	animation: hoverShadowAnim ease-in-out 4s infinite;
+}
+
+
+.shadow:hover {
+	width:200px;
+}
+
+.play.fade { 
+	transition: all .2s ease-in-out; 
+}
 
 
 .play:hover .play.fade {
 	opacity: 0.8;
+	top: 100px;
 }
 .play:hover .play.icon {
 	opacity: 1;
 }
 .play.icon {
+
 	transition: .5s ease;
 	opacity: 0;
 	text-align: center;
@@ -2442,6 +2487,7 @@ input, select, textarea {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+		width: 3em;
 	}
 
 		.icon:before {
@@ -2476,8 +2522,7 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		border-radius: 5px;
-		border: 0;
+		border: 1em solid transparent;
 		display: inline-block;
 		position: relative;
 	}
@@ -2488,10 +2533,16 @@ input, select, textarea {
 		}
 
 
-		
+		@keyframes zoomHoverAnim {
+			0% {top: 0%;}
+			50% {top: 5%;}
+			100% {top: 0%;}
+		}
 
-		.image.zoom { transition: all .2s ease-in-out; }
+		.image.zoom { transition: all .2s ease-in-out; animation: zoomHoverAnim ease-in-out 4s infinite;}
 		.image.zoom:hover {
+			border:1em solid white;
+			animation-play-state: paused;
 			transform: scale(0.9);
 		}
 
@@ -3451,8 +3502,17 @@ input, select, textarea {
 
 /* Banner */
 
-	#banner {
-		padding: 10em 0 4.75em 0 ;
+	#banner {padding: 7em 0 8.25em 0;
+		background: rgb(43,15,84);
+		background: linear-gradient(180deg, rgba(43,15,84,1) 8%, rgba(73,231,236,1) 100%);
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(43,15,84,1)), to(rgba(73,231,236,1)));
+		background-image: -moz-linear-gradient(rgba(43,15,84,1) 8%, rgba(73,231,236,1) 100%);
+		background-size: auto, cover;
+		background-position: center, center;
+		margin-bottom: -6.5em;
+	}
+	#banner:after {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:#0f0917' /%3E%3C/svg%3E");
 	}
 
 		#banner .inner {
@@ -3542,7 +3602,7 @@ input, select, textarea {
 				background: rgb(43,15,84);
 				background: linear-gradient(180deg, rgba(43,15,84,1) 8%, rgba(73,231,236,1) 100%);
 				background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(43,15,84,1)), to(rgba(73,231,236,1)));
-				background-image: -moz-linear-gradient(#fff 0%, #3E9C9D 100%);
+				background-image: -moz-linear-gradient(rgba(43,15,84,1) 8%, rgba(73,231,236,1) 100%);
 				background-size: auto, cover;
 				background-position: center, center;
 				margin-bottom: -6.5em;
@@ -3749,7 +3809,7 @@ input, select, textarea {
 		}
 
 		.wrapper.alt:before {
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:#252734' /%3E%3C/svg%3E");
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(37,39,52,1)' /%3E%3C/svg%3E");
 			-moz-transform: scaleX(-1);
 			-webkit-transform: scaleX(-1);
 			-ms-transform: scaleX(-1);
@@ -3758,7 +3818,7 @@ input, select, textarea {
 		}
 
 		.wrapper.alt:after {
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:#0F0917' /%3E%3C/svg%3E");
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(15,9,23,1)' /%3E%3C/svg%3E");
 			-moz-transform: scaleY(-1) scaleX(-1);
 			-webkit-transform: scaleY(-1) scaleX(-1);
 			-ms-transform: scaleY(-1) scaleX(-1);
@@ -3780,28 +3840,38 @@ input, select, textarea {
 
 			
 			.wrapper.style2:before {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(255,218,69,1)' /%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(37,39,52,1)' /%3E%3C/svg%3E");
 			}
 			
 			.wrapper.style2:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(255,129,66,1)' /%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(15,9,23,1)' /%3E%3C/svg%3E");
 			}
 
 			.wrapper.style2:before {
-				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
+				box-shadow: inset 0 -1px 0 0 rgba(37,39,52,1), 0 1px 0 0 rgba(37,39,52,1);
 			}
 
 			.wrapper.style2:after {
-				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
+				box-shadow: inset 0 -1px 0 0 rgba(15,9,23,1), 0 1px 0 0 rgba(15,9,23,1);
 			}
 
 		.wrapper.style3 {
-			background-color: #3d4051;
+			-moz-flex-direction: row-reverse;
+				-webkit-flex-direction: row-reverse;
+				-ms-flex-direction: row-reverse;
+				flex-direction: row-reverse;
+				text-align: right;
+			background-color: #0F0917;
+			
 		}
 
-			.wrapper.style3:before, .wrapper.style3:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:#0f0917' /%3E%3C/svg%3E");
-			}
+		.wrapper.style3:before {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(51,104,220,1)' /%3E%3C/svg%3E");
+		}
+		
+		.wrapper.style3:after {
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(43,15,84,1)' /%3E%3C/svg%3E");
+		}
 
 			.wrapper.style3:before {
 				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
@@ -3970,14 +4040,15 @@ input, select, textarea {
 
 			.wrapper.spotlight.style4 {
 				background: rgb(42,23,59);
-				background: linear-gradient(180deg, rgba(42,23,59,1) 32%, rgba(0,0,0,1) 100%);}
+				background: linear-gradient(180deg, rgba(42,23,59,1) 32%, #2e3141 100%);}
 
+				
 				.wrapper.spotlight.style4:before {
 					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(42,23,59,1)' /%3E%3C/svg%3E");
 				}
 				
 				.wrapper.spotlight.style4:after {
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='rgba(0,0,0,1)' /%3E%3C/svg%3E");
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(46,49,65,1)' /%3E%3C/svg%3E");
 				}
 
 				.wrapper.spotlight.style4:before {
@@ -3985,7 +4056,7 @@ input, select, textarea {
 				}
 
 				.wrapper.spotlight.style4:after {
-					box-shadow: inset 0 -1px 0 0 rgba(0,0,0,1), 0 1px 0 0 rgba(0,0,0,1);
+					box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
 				}
 
 			.wrapper.spotlight.style5 {
