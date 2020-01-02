@@ -59,7 +59,8 @@ html { scroll-behavior: smooth; }
 
 .grow {
 	background-color: #2e3141;
-	padding: 5px 5px 5px 5px;
+	padding: 0.1em 3em 0.5em 3em;
+	margin-bottom: 1em;
 	border-radius: 10px;
 	height: 2em;
 	width: 100%;
@@ -70,14 +71,16 @@ html { scroll-behavior: smooth; }
 	overflow: hidden;
   }
 
-
+  .grow.article {
+	padding: 0em 2em 2em 2em;
+  }
   .grow.article:hover {
 	height: 30em;
-	padding: 10px 10px 10px 10px;
   }
 
   .grow:hover {
 	  height: 10em;
+	  padding: 0.5em 3em 0em 3em;
   }
 
   .grow.image.left, .grow.image.right {
@@ -86,12 +89,10 @@ html { scroll-behavior: smooth; }
 	width: 40%;
   }
   .grow.image.left {
-	float:right;
-	padding: 1em 1em 1em 1em;
+	float:left;
   }
   .grow.image.right {
 	float:right;
-	padding: 1em 1em 1em 1em;
   }
 
 
@@ -3766,6 +3767,15 @@ input, select, textarea {
   		flex-direction: column; 
 	}
 
+
+		.wrapper:nth-child(2n - 1) .inner {
+			-moz-flex-direction: row-reverse;
+			-webkit-flex-direction: row-reverse;
+			-ms-flex-direction: row-reverse;
+			flex-direction: row-reverse;
+			text-align: right;
+		}
+
 		.wrapper:before, .wrapper:after {
 			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:#0f0917' /%3E%3C/svg%3E");
 		}
@@ -3835,24 +3845,26 @@ input, select, textarea {
 		
 
 		.wrapper.style2 {
-			background-color: #353849;
+			background: rgb(255,79,105);
+			background: linear-gradient(180deg, rgba(255,79,105,1) 8%, rgba(171,31,101,1) 100%); 
+			
 		}
 
 			
 			.wrapper.style2:before {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(37,39,52,1)' /%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(255,79,105,1)' /%3E%3C/svg%3E");
 			}
 			
 			.wrapper.style2:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(15,9,23,1)' /%3E%3C/svg%3E");
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:rgba(171,31,101,1)' /%3E%3C/svg%3E");
 			}
 
 			.wrapper.style2:before {
-				box-shadow: inset 0 -1px 0 0 rgba(37,39,52,1), 0 1px 0 0 rgba(37,39,52,1);
+				box-shadow: inset 0 -1px 0 0 rgba(255,79,105,1), 0 1px 0 0 rgba(255,79,105,1);
 			}
 
 			.wrapper.style2:after {
-				box-shadow: inset 0 -1px 0 0 rgba(15,9,23,1), 0 1px 0 0 rgba(15,9,23,1);
+				box-shadow: inset 0 -1px 0 0 rgba(171,31,101,1), 0 1px 0 0 rgba(171,31,101,1);
 			}
 
 		.wrapper.style3 {
