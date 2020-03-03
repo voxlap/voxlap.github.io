@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Devblog - Project Blue 3/2/2020</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">George Castle</a></h1>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#games">Games</a></li>
+					<li><a href="/files/resume.pdf">Resume</a></li>
+					<li><a href="index.html#about">About Me</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<header>
+				<div class="inner">
+					<h2>Aniamting the Player</h2>
+					<p>Project Blue 3/2/2020</p>
+				</div>
+			</header>
+			<!-- Content -->
+			<div class="wrapper">
+				<div class="inner">
+					<h2 class="major">Meeting Work</h2>
+					<h3 class="major">Making slides:</h3>
+					<img class="left" style="width: 50%;" src="images/project_blue/production/slides.png">
+					<p>2.5 hours per week (disucssing agenda, planning content)</p>
+
+					<h3>Editing video</h3>
+					<img class="left" style="width: 50%;" src="images/project_blue/production/editing.png">
+					<p>0.5 hours per week (Watching through lecture recording, editing out moments)</p>
+
+					<h3>Managing YouTube Channel</h3>
+					<img class="left" style="width: 50%;" src="images/project_blue/production/youtube.png">
+					<p>0.25 hours per week (Downloading lecture recording, uploading video, writing description)</p>
+
+					<h3>Sending Announcements</h3>
+					<img style="width: 50%;" src="images/project_blue/production/announcement.png">
+					<p>0.25 hours per week</p>
+
+					<h2 class="major">Player Pod Work</h2>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/io_rigging.png">
+					<p>I was tasked with setting up the prefab for Io's view. This included making basic keyframes for
+						most of the animations, and figuring out how to animate the scarf.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/animator.png">
+					<p>I also setup the various parameters and transitions for Io's animator, as an example for the
+						other animator's who will be working on animating her.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/io_fall.gif">
+					<p>Here is one of the first and simplest animations I made for Io falling, which is just a single
+						keyframe for now, and is blended into from the jumping up keyframe depending on Io's vertical
+						velocity.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/io_idle.gif">
+					<p>Next up is Io's idle animation. This is a bit over exaggerated at the moment, as I mainly wanted
+						it to move so much while testing out the scarf physics</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/io_jump.gif">
+					<p>Here is Io's jump animation. It's currently very short as the animations are not driving the
+						motions, so I couldn't have too much anticipation</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/io_run.gif">
+					<p>Here is Io's run animation. Of the animations I've completed thus far, the keyframes themselves
+						are probably the closest to a final product, but it still needs extra polish, adding in the
+						various principles of animation to bring it to a finalized state.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/io_slide.gif">
+					<p>Here is Io's wall slide animation. For this animation, I made sure to flip the sprite
+						horizontally in the animation, so that when you run into or fall into a wall, Io turns around to
+						face away from it. This meant that I had to go back and add keyframes to all of the other
+						animations so that her scale was getting rest.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/io_wall_jump.gif">
+					<p>Next up is the wall jump. Similar to the normal jump, it's rather abrupt due to animations not
+						driving any motions, and is by far the roughest of these animations, but should still serve as
+						an okay starting point for the other animators to work off of.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/rigidbody_scarf.png">
+					<p>Here we have a snippet from Unity's blog post on the Lost Crypt, their latest 2D features demo.
+						This part specifically is talking about how they used rigidbody constraints to make the player's
+						hair physics driven, which is a system I intended to copy for Io's scarf.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/rigidbody_scarf_mess.gif">
+					<p>That... didn't end well. Something about having the rigidbodies be children of the bones utterly
+						destroyed the scarf once the player began to move, and the problem greatly worsened when they
+						switched directions.</p>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/FcnvwtyxLds" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+					<p>After many hours of trial and error trying to get the rigidbody driven scarf to work, I abandoned
+						the approach and began looking for alternatives. I happened across this video tutorial, which
+						explains how to use verlett integration to create 2D physics ropes using the line render, and
+						followed along to create my own version. Basically, we give a starting point, and the script
+						simulates the physics for a number of points in a rope separated a given length.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/scarf_prefab.png">
+					<p>Once I knew how I was going to be setting up the scarf, one gameobject with the newly written
+						verlett integration rope script and linerenderer for each portion of the scarf, I setup the
+						prefab.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/scarf_piece_example.png">
+					<p>I setup the linerenderer on each portion of the scarf to have a width curve that matched the
+						artist's intended shape for that section, and set the color of the linerenderer to match.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/scarf_front.png">
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/scarf_back.png">
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/scarf_knot.png">
+					<p>Pictured above are the different settings for each scarf piece which are setup to have the
+						correct number of segments and distance between points so that they match their intended look.
+					</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/verlet_scarf.gif">
+					<p>Here is an gif of the final result. It's a bit too wavy / light for my taste, so my next steps
+						will be to figure out how to add some more weight to the simulation.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/io_view_showcase.gif">
+					<p>And finally, here's how it all looks together.</p>
+
+					<h2 class="major">General Studio Responsibilities:</h2>
+					<h3>Attending Leads meetings:</h3>
+					<p>3 hours per week</p>
+					<h3>Attending Studio Meetings:</h3>
+					<p>2 hours per week</p>
+				</div>
+			</div>
+
+		</section>
+
+</body>
+
+</html>
