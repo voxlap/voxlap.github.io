@@ -54,41 +54,66 @@
 			<div class="wrapper">
 				<div class="inner">
 					<h2 class="major">Review Work</h2>
-					<h3 class="major">Making slides:</h3>
+					<h3 class="major">Giving Feedback & Critique:</h3>
 					<img class="left" style="width: 50%;" src="images/project_blue/art-direction/artIntroduction.png">
+					<p>Over the past 3 weeks I have made the transition from being the Project Lead to being the art
+						director. This change was mainly made as I was doing a lot of animation work and teaching
+						animation to a lot of members, being asked to review art work, being asked to implement art work
+						on the sprites, and this took up a large portion of my time, and as an art student, I found it
+						to be more enjoyable work.</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/art-direction/boss1.png">
+					<p>After this change was determined among the leads, I began to give the artists feedback on their
+						in progress works in the art channels. Here, I was giving feedback about the Crystal caves boss
+						animation.</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/art-direction/flower1.png">
+					<p>Here I can be seen giving feedback to Naveen about his teleport recharge item in hopes of
+						refining the design and making it more cohesive with the rest of the game's artwork </p>
 					<img class="left" style="width: 50%;" src="images/project_blue/art-direction/flower2.png">
 					<img class="left" style="width: 50%;" src="images/project_blue/art-direction/flower3.png">
+					<p>Following my public feedback, Naveen messaged me a few more times asking for further advice as he
+						began to iterate on the work</p>
 
 					<img class="left" style="width: 50%;" src="images/project_blue/art-direction/stalker.png">
-
+					<p>Here I'm giving advice about one of the artist's enemy animations, in hopes that they could make
+						the walk cycle a bit more natural.</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/art-direction/stalwart1.png">
-
+					<p>Here Naveen reached out to me asking for more feedback on one of his enemy sprite, and did again
+						a few days later.</p>
 
 
 
 					<h2 class="major">Player Pod Work</h2>
 					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/attackCode.png">
-
+					<p>Here is the code I wrote for triggering the player's attack animatioons</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/downAttack.gif">
-
+					<p>Here is the first (down attack) of 3 different attack animations I did for the player. These
+						needed to be rather quick so it didn't feel unresponsive, but still have enough anticipation and
+						recovery time to feel believable.</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/upAttack.gif">
-
+					<p>Here is the up attack version</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/horizAttack.gif">
-
-					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/attackCode.png">
+					<p>And finally the horizontal attack</p>
 
 					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/newAnimator.png">
-
+					<p>Next up, I reworked the entire animator and events that triggered the animations on the player to
+						use bools rather than triggers in an attempt to cut back on the various bugs that we were having
+						with the animator setup</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/newAnimEvents1.png">
-
+					<p>Here you can see some of those new functions being called from the character controller events
+					</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/newAnimEvents2.png">
 
 					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/newIdle.gif">
-
-
-
+					<p>Next up, I reworked the player's idle animation to be a bit more subtle after taking feedback
+						from some members.</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/IoThrow.gif.gif">
+					<p>Here is the projectile throw animation I made</p>
+					<img class="left" style="width: 50%;" src="images/project_blue/player-pod/newIdle.gif">
+					<p>And here is how I setup the attack animator. It's on another animator layer with a single
+						blendtree triggered by entering from any state based on an animation trigger, and another state
+						that it starts at by default with no motion. The layer is weighted at 1 and overrides any motion
+						the upper body was doing for the lower layer animation in order to let the player attack while
+						in any state.</p>
 
 
 					<h2 class="major">General Studio Responsibilities:</h2>
