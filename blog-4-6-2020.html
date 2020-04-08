@@ -57,32 +57,70 @@
 					<h2 class="major">Player Pod Work</h2>
 					<h3>The Perfect Swing</h3>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/attackAnimator1.png">
+
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/attackAnimator2.png">
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/attackAnimator3.png">
+					<p>My goal this time around was to revamp the attack animations, and the way that the attack
+						animator layer was setup. I got started by making 3 different blendtrees, one that had
+						animations where the player stepped forward before attacking that were to be played when they
+						were not moving and grounded, one that had animations that had no leg keyframes, and one set
+						that also included a downward attack for when the player was in the air, and finally I have them
+						all play a sword sheathing animation when the attack finishes</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/oldHorizAttack.gif">
+					<p>For reference, here is the old horizontal attack, which is very stiff, and didn't well convey the
+						attack direction</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/newHorizAttack.gif">
+					<p>And here is the new.</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/horizontalAttack3D.gif">
+					<p>This new animation was created by moving the bones in 3D space so that I could try and overcome
+						the stiffness that the 2D bone animations had caused in the old animations. This caused a bit of
+						a paper type look, but I feel that the added readability it adds to the swing is a worthwhile
+						payoff</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/attackUpLegs.gif">
+					<p>Pictured here is the upward attack animated using this same 3D style</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/attackUpNoLegs.gif">
+					<p>And a version of the same animation with no leg or hip keyframes</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/attackUp3D.gif">
+					<p>And here's what it looked like in 3D</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/downAttack.gif">
+					<p>Finally, here's the new downward attack, which uses a minimal amount of the 3D effect, as it was
+						more inline with the 2D perspective</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/downAttack3D.gif">
+					<p>That said, here's what it looks like in 3D</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/swordAway.gif">
+					<p>Lastly, here's the aforementioned sheathing animation</p>
 					<h3>Leaping to New Heights</h3>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/jumpUp.gif">
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/fallDown.gif">
+					<p>Next up, I wanted to revamp the player's jump and falling animations so they were more than just
+						a single keyframe, so I added some rustling to the hair and Io's clothes</p>
+
 					<h3>Life, Death, and Animations</h3>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/deathAnimSwordBounce.gif">
+					<p>Here we have my first attempt at a death animation, which continues off of Alyssa's OnHit
+						animation. Originally I had hand animated the sword falling out of Io's hand, but realized that
+						that wouldn't work if she were to die near the edge of the platform.</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/swordBouncePhysics.png">
+					<p>Upon realizing that my animation wasn't going to work as is, I turned to the studio server to ask
+						if anyone had any ideas on how to pivot to using a physics driven sword</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/deathAnimNoSwordBounce.gif">
+					<p>I didn't get a chance to enact any of that advice, so for now I just made the sword stay on her
+						back when she dies</p>
 					<h3>Giving the Scarf Some Weight</h3>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/scarfDamperShowcase.gif">
+					<p>Tackling a long standing greivance with the game, I finally added a way to damper the motion of
+						the scarf!</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/scarfDamperInspector.png">
+					<p>Here are the different settings for the different directions that the scarf movement could be
+						dampered in</p>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/scarfDamperCode.png">
-
+					<p>And here is the change that I added to the scarf code</p>
 					<h2 class="major">Level Design Pod Work</h2>
 					<h3>Fixing the Background</h3>
 					<img class="left" style="width: 50%;" src="images/project_blue/4-6-2020/fixedParallax.gif">
+					<p>I spent several hours fixing the parallax script! I made it so it's locked vertically to the
+						camera, fixed the jitter of the movement, and fixed the way the prefab was setup so the effect
+						is more subtle</p>
 
 					<h2 class="major">General Studio Responsibilities:</h2>
 					<h3>Attending Leads meetings:</h3>
