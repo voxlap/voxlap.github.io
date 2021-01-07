@@ -1,18 +1,59 @@
 $(document).ready(function () {
     $(window).scroll(function () {
-        $('.grow').each(function () {
+        $('.inner').each(function () {
+            var play_button = $(this).find('.image.zoom');
+            var grow = $(this).find('.grow');
+            var icon = $(this).find('.play.icon');
+
+
             if ($(this).isOnScreen()) {
                 // The element is visible, do something
-                $(this).css("height", 10 + "em");
-                $(this).css("padding", "0.5em 3em 0em 3em");
-                console.log("henlo");
+                play_button.css("border", "1em solid white");
+                play_button.css("animation-play-state", "paused");
+                play_button.css("transform", "scale(0.9)");
+
+                grow.css("height", 10 + "em");
+                grow.css("padding", "0.5em 3em 0em 3em");
+
+                icon.css("opacity", "1");
+
             } else {
                 // The element is NOT visible, do something else
-                $(this).css("height", 2 + "em");
-                $(this).css("padding", "0.1em 3em 0.5em 3em");
+                play_button.css("border", "none");
+                play_button.css("animation-play-state", "running");
+                play_button.css("transform", "scale(1)");
+
+                grow.css("height", 2 + "em");
+                grow.css("padding", "0.1em 3em 0.5em 3em");
+
+                icon.css("opacity", "0");
 
             }
         });
+        /*
+        $('.image.zoom').each(function () {
+            if ($(this).isOnScreen()) {
+                $(this).css("border", "1em solid white");
+                $(this).css("animation-play-state", "paused");
+                $(this).css("transform", "scale(0.9)");
+
+            } else {
+                $(this).css("border", "none");
+                $(this).css("animation-play-state", "running");
+                $(this).css("transform", "scale(1)");
+            }
+        });
+
+        $('.play.icon').each(function () {
+            if ($(this).isOnScreen()) {
+                $(this).css("opacity", "1");
+
+            } else {
+                $(this).css("opacity", "0");
+            }
+        });
+        */
+
     });
 });
 
@@ -27,8 +68,8 @@ $.fn.isOnScreen = function () {
     viewport.right = viewport.left + win.width();
     viewport.bottom = viewport.top + win.height();
 
-    viewport.top = viewport.top + (win.height() / 3);
-    viewport.bottom = viewport.bottom - (win.height() / 3);
+    viewport.top = viewport.top + (win.height() / 2);
+    viewport.bottom = viewport.bottom - (win.height() / 2);
 
 
     var bounds = this.offset();
