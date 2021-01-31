@@ -169,318 +169,205 @@
 					<font size="+6">
 						<h1 class="major">Contributions Breakdown</h1>
 					</font>
-					<h3 class="major" id="hats">Wearing multiple hats</h3>
-					<p style="padding-top: 2em;">Being in a leadership role in a student led project means having to
-						take on several roles. During the devlopment of Dreamwillow, I often had to juggle between these
-						different roles and do my best to prioritize each task. </p s>
-					<br>
-					<!--
-					<div class="grow article" id="producer" style="background-color: #ab1f65;"
-						onmouseover="this.style.height='30em'" onmouseout="this.style.height='2em'">
-						<h2 class="major">Co-Producer</h2>
-						<img class="grow image right" src="images/dream-shop.gif">
-						<h3 style="padding-left: 2em;" align="left"> Assigning Tasks </h3>
-						<p style="padding-left: 2em;" align="left">Morbi mattis mi consectetur tortor elementum, varius
-							pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque
-							ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non
-							efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur
-							purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante
-							ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget
-							ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit
-							accumsan cursus. Etiam ut gravida sapien.</p>
-					</div>
-					<br><br>
-					-->
-					<div class="grow article" id="animator" style="background-color: #971f5f;"
-						onmouseover="this.style.height='113em'" onmouseout="this.style.height='2em'">
-						<div>
-							<h2 class="major">Pitching the Game</h2>
-							<p>During my time as lead animator for WolverineSoft Studio, I had several respoinsibilites.
-								From creating our asset workflow, to creating learning resources for other team members,
-								to reviewing others' animations. Pictured below is a workshop I gave for general
-								WolverineSoft members and studio animators to learn how to animate in Unity using the <a
-									href="https://docs.unity3d.com/Packages/com.unity.2d.animation@3.0/manual/index.html">2D
-									Animation</a> package.
-							</p>
 
+					<body>
+						<h1>Game Design Portfolio</h1>
+						<ul>
+							<li>George Castle</li>
+						</ul>
+						<h1 style="page-break-before:always; ">Game Prototyping &amp; Pitching</h1>
+						<h2>Bloom: Tome of Power</h2>
+						<h1 style="page-break-before:always; ">Game Pitching</h1>
+						<h2>In WolverineSoft Studio, the 30-40 person student run game studio / club I help to run at
+							the University of Michigan, each semester we have students pitch a game idea that they would
+							like the team to create. We give a template with various questions for people to answer, and
+							they fill it out and submit their ideas. </h2>
+						<h2>We tend to pick game pitches that we feel are scoped low enough that they can be created
+							within our typical 3 month development cycle, and that best fit our team, which has a high
+							number of 2D artists, a low number of 3D artists, and only 1-2 writers. To that end, this
+							past summer, I pitched my first game idea, a <a
+								href="https://docs.google.com/document/d/1udXzAOk_EQSwkHPWvn4muFE_ql8GLpZ8Cx_Ie8i7oIM/edit?usp=sharing"><u>Roguelite
+									Retro First Person Shooter</u></a>. </h2>
+						<h2>This game was intended to give our overwhelmingly programmer oriented team enough systems to
+							expand on, our 2D artists work to do in animating billboarded enemy sprites, and those who
+							wished to do 3D level design and artists who wanted to do 3D modeling a chance to shine.
+						</h2>
+						<h2>My pitch ended up being chosen as one of the two games we developed that summer, and
+							although the roguelite elements were cut, the game was eventually <a
+								href="https://wolverinesoft-studio.itch.io/bloom-tome-of-power"><u>published on
+									itch.io</u></a></h2>
+						<h1 style="page-break-before:always; ">Game Prototyping</h1>
+						<h2>Something that helped bolster my pitch getting chosen, was the <a
+								href="https://voxlap.itch.io/game-pitch"><u>prototype demo</u></a> (password: wsoft) I
+							solo developed in little over a week in order to showcase my pitch’s potential using
+							previous WolverineSoft studio art assets and code base (which were expanded upon by me in
+							order to implement game specific features, along with several game specific scripts,
+							prefabs, and art assets)</h2>
+						<h1 style="page-break-before:always; ">Level Design</h1>
+						<h2>Bloom: Tome of Power</h2>
+						<h1 style="page-break-before:always; ">Level Design Team</h1>
+						<h2>Once production began, I took on multiple roles. The majority of my time was taken up as the
+							game’s Art Director, but I also spent a good amount of time attending game design team
+							meetings, explaining my original pitch ideas to team members, giving input during
+							playtesting post mortems, and also, working as a Principal Level Designer, leading a team of
+							4 developers. </h2>
+						<h2>As a principal level designer, I was tasked to lead my team in creating the 2nd level in the
+							game, which would introduce the player to a spell that slowed down enemies inside of an Area
+							of Effect bubble. </h2>
+						<h1 style="page-break-before:always; "><b>Planning</b></h1>
+						<h2>Going into our greyboxing, we had 5 main goals for our level</h2>
+						<ul>
+							<li>Introduce the player to a new spell</li>
+							<li>Draw the player into the space</li>
+							<li>Create a clear sightline to the end of the level from the start</li>
+							<li>Allow players to take multiple intersecting paths through a village area</li>
+							<li> Create a 2nd sightline back to the exit of the level near the end</li>
+						</ul>
+						<h1 style="page-break-before:always; ">Part 1: Establishing a clear starting sightline</h1>
+						<h1 style="page-break-before:always; ">Version #1 </h1>
+						<h2>Our initial blocking of the village valley had major issues from the start. While the player
+							could see the end goal (the tower in the middle of the village), they couldn’t immediately
+							see a path to reach that location</h2>
+						<h1 style="page-break-before:always; ">Version #2</h1>
+						<h2>Our second iteration was much closer to what we wanted. Moving away from the zigzagging
+							paths of the original version, the valley was given a slope along the side where the
+							entrance was located. This gave the player a natural idea of where to go, and adding in the
+							wall with a gate served to guide the player towards our intended path through the space, and
+							a way to naturally invite them into the area. Additionally, the raised section of the wall
+							was added to help hide the fact that several enemies waited for the player on the other
+							side.</h2>
+						<h1 style="page-break-before:always; ">Final Version</h1>
+						<h2>Later in development, we found that it was best to place the new spell the player was
+							supposed to try in this level directly into view from the start, so we added a room halfway
+							up the central tower, and removed the hump in the wall that had been covering up enemies,
+							which forced us to rework our enemy placements, but this ended up working in our favor as
+							players were able to better familiarize themselves with the landscape before entering combat
+						</h2>
+						<h1 style="page-break-before:always; ">Part 2: Intersecting Paths</h1>
+						<h1 style="page-break-before:always; ">Version #1</h1>
+						<h2>Our initial greybox had very few options for pathing, for the most part it was just a single
+							path through the valley towards the cave entrance, with a slight zig zag to avoid the tower
+							in the middle.</h2>
+						<h1 style="page-break-before:always; ">Version #2</h1>
+						<h2>In our second iteration, in order to start having that feeling of intersecting paths and a
+							more open arena area, we began designing 2 main paths through the level, yellow and blue,
+							with red representing the critical path both converge on, and the couple of sections you
+							could cross from one path to another being green
 
-							<video style="width: 100%;" controls>
-								<source
-									src="//s3.amazonaws.com/leccap.engin.umich.edu/media/ygd0jujdczqbc4uzheo/1571353223-893-O-c22-96668-13.mp4">
-							</video>
+							Early on we placed the new spell for the player to try just inside of the gate a little over
+							to the right in the purple circle. Having this right leaning placement meant more players
+							took the right path, and so we were getting less feedback on the left side of the level</h2>
+						<h1 style="page-break-before:always; ">Bloom Level Design</h1>
+						<h2>As mentioned earlier, in the final design, we moved the new spell into a room in the central
+							tower, which greatly impacted player pathing through the level. Players no longer favored
+							the right side, and as we also added several spots to go back and forth between paths,
+							players began moving between the two halves of the level much more freely. </h2>
+						<h2>One issue that was still present though, was the weakness of the ground floor of the level.
+							Much of the level had been designed with running around on the rooftops in mind. Several
+							ramps were included to allow for the player to make it back up onto the roofs if they fell,
+							but the experience of walking around on the ground itself was much too cramped. </h2>
+						<h2>To fix this, we moved buildings around on left side to open up a path around the left on the
+							ground, and we also opened up space between buildings throughout, even carving into the
+							geometry in some places.
 
-						</div>
-						<div>
-							<img src="images/dreamwillow/player_walk.gif" class="image left"
-								style="width: 20em;"><br><br>
-							<h1 class="major" align="right" style="padding-right: 2em; overflow: hidden;">Walking Around
-							</h1>
-							<p align="right">One of the first things I rigged and animated for Dreamwillow was the
-								player character, as they were the first finished sprite for the game. At first I had
-								difficulty working within the constraints of the 2D Animation package and learning the
-								workflow, but after animating the first view, I got the hang of it, and made quick work
-								of the rest.
-							</p><br><br>
-						</div>
-						<div>
-							<img src="images/dreamwillow/player_idle.gif" class="image right"
-								style="width: 20em;"><br><br>
-							<h1 class="major" align="left" style="padding-left: 2em; overflow: hidden;">Idle Hands</h1>
-							<p align="left">Pictured to the right is the main character's idle animation I animated.
-							</p>
-						</div>
-						<h3 class="major" style="margin-bottom: 2em; margin-top: 9em;"> </h3>
-						<div>
-							<div style="display: flex; margin: 0em 0em 1em 0em; width: 100%;">
-								<img src="images/dreamwillow/idle_rough.gif" style="width:20%;">
-
-								<div style=" justify-content: center; align-items: center;">
-									<span class="fa fa-arrow-right"
-										style="margin: 6em 0.3em 0em 0.3em; font-size: 200%;"></span>
-								</div>
-								<img src="images/dreamwillow/idle_polish.gif" style="width:20%; margin-right: 2em;">
-								<div style=" border-right: solid 2px rgba(255, 255, 255, 0.125);"> </div>
-								<img src="images/dreamwillow/run_rough.gif" style="margin-left: 2em; width:20%;">
-
-								<div style="justify-content: center; align-items: center;">
-									<span class="fa fa-arrow-right"
-										style="margin: 6em 0.3em 0em 0.3em; font-size: 200%;"></span>
-
-								</div>
-								<img src="images/dreamwillow/run_polish.gif" style="width:20%;">
-							</div>
-							<h1 class="major" align="left" style="padding-left: 2em; overflow: hidden;">Polish Work</h1>
-							<p align="left">Finished rather late in the production cycle, I didn't have time to send the
-								above enemy back to it's original animator to rework, and instead opted to polish the
-								frames myself, adding in followthrough, anticipation, etc, to try and finish the product
-								before the end of our last sprint.
-							</p>
-						</div>
-
-					</div>
-					<br><br>
-					<div class="grow article" style="background-color: #831e58;" id="character"
-						onmouseover="this.style.height='115em'" onmouseout="this.style.height='2em'">
-						<div>
-							<h2 class="major" id="vfx-head">Art Direction</h2>
-							<p>Early on in production, before we had settled on our Pod structure for teams, the art
-								department was assignd various tasks. The first few being intended to help us narrow
-								down a design for our main character.
-							</p>
-						</div>
-						<div><img src="images/dreamwillow/character-board.png" class="image right"
-								style="background-color: #831e58; width: 20em;">
-
-							<h1 class="major" align="left" style="padding-left: 2em; overflow: hidden;">Building a World
-							</h1>
-							<p align="left">Working off the early underworld theme the art team had settled on, I
-								browsed pinterest, tumblr, and deviantart trying to find things that I
-								felt best fit my vision for the game, and constructed a moodboard for what our main
-								character might look like. The key things that stood out to me here were boots, a hood
-								or hat to cover their head, and a dark / shadowy face.
-							</p>
-
-						</div><br><br><br><br>
-						<div>
-							<img src="images/dreamwillow/georgeMC.png" class="image left"
-								style="background-color: #831e58; width: 20em;"><br><br>
-							<h1 class="major" align="right" style="padding-right: 2em;">Iteration, Iteration, Iteration
-							</h1>
-							<p align="right">Working off of my moodboard, and the original underworld theme we were
-								given, I created this character design. The tentacles were intended to allow for
-								animations that were uncoupled from the player’s movement, and also to add to the creepy
-								factor
-							</p><br><br><br><br>
-						</div>
-						<div>
-							<h1 class="major" align="left" style="padding-left: 2em;">We Got Style</h1>
-							<img src="images/dreamwillow/mc_variations@3x.png"
-								style="background-color: #831e58; padding: 0em 0em 0em 0em; width: 100%;">
-							<p align="left">After all of the members of the art team pitched their designs for the main
-								character, I was tasked with vectorizing another team member's design. As the artist's
-								sketch had no color scheme, I made multiple different sprites and ran them by one of the
-								art leads to get approval. Ultimately, we went with the brown and grey design.
-							</p>
-						</div>
-						<div>
-							<h1 class="major" align="left" style="padding-left: 2em;">The Extra Dimension</h1>
-							<img src="images/dreamwillow/mc_variations@3x.png"
-								style="background-color: #831e58; padding: 0em 0em 0em 0em; width: 100%;">
-							<p align="left">After all of the members of the art team pitched their designs for the main
-								character, I was tasked with vectorizing another team member's design. As the artist's
-								sketch had no color scheme, I made multiple different sprites and ran them by one of the
-								art leads to get approval. Ultimately, we went with the brown and grey design.
-							</p>
-						</div>
-						<div>
-							<h1 class="major" align="left" style="padding-left: 2em;">A Neat Bow</h1>
-							<img src="images/dreamwillow/mc_sprites_crop.png"
-								style="background-color: #831e58; padding: 0em 0em 0em 0em; width: 100%;">
-							<p align="left"> After all of the designs were vectorized, the whole team voted on which
-								design to use for the main character. My design got 2nd place, behind the design that I
-								had been asked to vectorize. I was then assigned to create the sprites for each
-								direction the character would face, pictured above.
-							</p>
-						</div>
-					</div>
-					<br><br>
-					<div class="grow article" style="background-color: #831e58;" id="vfx"
-						onmouseover="this.style.height='78em'" onmouseout="this.style.height='2em'">
-						<div>
-							<h2 class="major" id="vfx-head">Lead VFX Artist</h2>
-							<p>During Dreamwillow's production, I was one of two artists tasked with creating particle
-								systems, and of the two I was in charge.
-							</p>
-						</div>
-						<div><img src="images/dreamwillow/portal.gif" class="grow image right"
-								style="background-color: #831e58; width: 20em;">
-
-							<h1 class="major" align="left" style="padding-left: 2em; overflow: hidden;">Portals</h1>
-							<p align="left">Pictured to the left is a gif of the particle system I created for the level
-								exit portal. Particles are spawned every few seconds with a long trail and a color that
-								changes over time, and in the center of the portal is a force field that pulls nearby
-								particles in, causing the cool orbiting effect. If I had had the time, I would have
-								finished it off with a shader on the orange ellipse of the portal so it wasn't just a
-								solid orange.
-							</p>
-
-						</div><br><br><br><br><img src="images/dreamwillow/soul.gif" class="grow image left"
-							style="background-color: #831e58; width: 20em;"><br><br>
-						<h1 class="major" align="right" style="padding-right: 2em;">Souls</h1>
-						<p align="right">Pictured to the left is the soul (currency item) which is probably the art
-							asset that took the most of my time to polish for Dreamwillow, as I wanted a wispy sort of
-							flame object, but it had to keep it's cartoonish vector art look, while still being made
-							with a particle system in Unity. It's made of two parts. The bottom half, which is an
-							animated spinning orb, and the top, which is a particle system layered underneath the orb.
-						</p><br><br><br><br><img src="images/dreamwillow/summon_vfx.gif" class="grow image right"
-							style="background-color: #831e58; width: 20em;">
-						<h1 class="major" align="left" style="padding-left: 2em;">Summoning</h1>
-						<p align="left">Finally, we have the particle system used to show an enemy being resurrected (a
-							part of our core mechanic). This particle system was a collobration between me and one other
-							artists. They created the rough draft of the spiraling particles, and I tweaked them and
-							added in the 2nd half, with the particles that emit from the corpse.
-						</p>
-					</div>
-					<br><br>
-					<div class="grow article" style="background-color: #6f1e52;" id="ui-ux"
-						onmouseover="this.style.height='80em'" onmouseout="this.style.height='2em'">
-						<div>
-							<h2 class="major">UI/UX Designer</h2>
-							<p>I was the pod lead for the UI pod, and the primary artist working on the team. This meant
-								that all UI decisions went through me, and that I created the majority of the UI assets
-								that made it into the final build of the game. From the HUD, to the main menu, to the
-								pause and settings menu.
-							</p>
-						</div>
-						<br><br>
-						<div>
-							<img src="images/dreamwillow/ui_iter1.png" class="image right">
-							<h1 class="major" align="left" style="padding-left: 2em; overflow: hidden;">Just like Isaac
-							</h1>
-							<p align="left">Pictured to the right is an early mockup for the HUD. It features a thick
-								black bar at the top where all UI elements are placed. This was at the behest of one of
-								our designers, as they wanted to replicate the User Interface of The Binding Of Isaac,
-								which features a similar black bar. This was intended to stop the UI elements from
-								blocking the player's view of any enemies or projectiles.
-							</p>
-
-
-						</div>
-						<br><br>
-						<div><img src="images/dreamwillow/ui_iter2.png" class="image left">
-							<h1 class="major" align="right" style="padding-right: 2em; overflow: hidden;">Shifting
-								Around</h1>
-							<p align="right">Pictured to the left is a later iteration, in which the black bar has been
-								removed, and the currency display has moved to the bottom right corner. This change was
-								made as the art team had felt that it gave a more natural feel to the UI and had a less
-								intrusive presence than the black bar.
-							</p>
-						</div>
-						<br><br>
-						<div><img src="images/dreamwillow/ui_iter3.png" class="image right">
-							<h1 class="major" align="left" style="padding-left: 2em; overflow: hidden;">Putting on the
-								Mask</h1>
-							<p align="left">Getting close to the end here, this is basically the final layout of the UI.
-								The blocky squares have been swapped for round masks and a counter has been added for
-								health potions. The only changes made after this were updated the sprites to better fit
-								the theme.
-							</p>
-						</div>
-						<br><br>
-						<div>
-							<img src="images/dreamwillow/pause_settings_menu.gif" class="image left">
-
-							<h1 class="major" align="right" style="padding-right: 2em; overflow: hidden;">Taking a Pause
-							</h1>
-							<p align="right">Finally, we have the pause and settings menu. For this menu, I touched up
-								another artists design for the buttons, animated everything, chose the font, and placed
-								all elements.
-							</p>
-						</div>
-					</div>
-					<br><br>
-					<div class="grow article" style="background-color: #5b1d4b;" id="level-design"
-						onmouseover="this.style.height='165em'" onmouseout="this.style.height='2em'">
-						<div>
-							<div>
-								<h2 class="major">Level Designer</h2>
-								<p>I was one of three level designers on Dreamwillow, tasked with creating the 3rd level
-									and the final level out of the 6 levels in the final build of the game. This work
-									mainly involved thinking up specific enemy encounters I wanted the player to
-									experience, designing a room around that experience, and then trying to use each
-									room to push the player down a certain path to the end of the level. Perfecting that
-									flow ended up taking a lot more time than I had first realized, but through lots of
-									playtesting, observation of players, and discussion with other level designers, I
-									was able to refine my levels and create a better experience.
-								</p>
-							</div>
-							<div>
-								<h1 class="major" align="left" style="padding-left: 2em;">Level 3 - The Split Path</h1>
-								<img src="images/dreamwillow/image5.png"
-									style=" padding: 0em 0em 0em 0em; width: 100%;">
-								<img src="images/dreamwillow/image8.jpg"
-									style=" padding: 0em 0em 0em 0em; width: 100%;">
-								<h3 class="major"> </h3>
-								<br>
-								<p align="left">Pictured above are screenshots of level three. This level was intended
-									to be a mid game challenge level, with fast moving enemies, and a difficult to reach
-									end that couldn't be ran to. The top is an early iteration, and the bottom is the
-									final design.
-									<br><br>
-									When iterating on the design, I added health pickups to give the player moments of
-									rest, removed a long empty hall at the begining to get the player into the action
-									quicker, moved enemies away from the first door in an attempt to help the door
-									problem, opened up some of the smaller rooms, and pushed the exit portal farther
-									back so it was more difficult to reach, as players had been able to duck through
-									enemies to reach it in the earlier version.
-								</p>
-							</div>
-							<div>
-								<h1 class="major" align="left" style="padding-left: 2em;">Level 6 - The Den</h1>
-								<img src="images/dreamwillow/image20.png"
-									style=" padding: 0em 0em 0em 0em; width: 100%;">
-								<img src="images/dreamwillow/image4.jpg"
-									style=" padding: 0em 0em 0em 0em; width: 100%;">
-								<h3 class="major"> </h3>
-								<br>
-								<p align="left">Pictured above are screenshots of level six. This level was intended
-									to be the final level, and therefore needed to be challenging, but not impossible, a
-									test of the player's skills thus far. The top is an early iteration, and the bottom
-									is the final design.
-									<br><br>
-									When iterating on this design, I added several health pickups to ensure the player
-									could reach the end, moved the exit so that the progression felt more natural, added
-									more enemies of different types into what became the final room and also moved the
-									currency pickups to be behind enemies in order to encourage clearing the final room.
-
-
-								</p>
-							</div>
-						</div>
-					</div>
-					<h3 class="major">&nbsp;</h3>
+							In order to pay a bit of homage to classic retro FPS titles, and in order to add a small
+							incentive for exploration, we added secret and hard to get to areas, noted with purple
+							arrows, to the level. The one on the right is a classic walk through the wall to reveal a
+							hidden hallway, and the one on the left was a hard to spot cave that required a difficult
+							jump in order to access, and both housed weapons the player tried in the previous level</h2>
+						<h1 style="page-break-before:always; ">Part 3: Establishing a clear ending sightline</h1>
+						<h1 style="page-break-before:always; ">Version #1
+						</h1>
+						<h2>In the initial version of the level, the end of level sightline was actually pretty good,
+							even being well framed by the walls of the cave exit, but there was no place for the player
+							to stand once exiting, and it didn’t make much sense that the cave ended so abruptly. We
+							decided to move forward by adding in a platform for the player to stand on</h2>
+						<h1 style="page-break-before:always; ">Final Version</h1>
+						<h2>In the final version, the platform we added does slightly obstruct the view of the exit, but
+							the player can still see, and often moved out onto the platform to assess the situation
+							before jumping in to the last fight of the level.</h2>
+						<h2>If I were to expand on the game in the future, I would have the platform break off when the
+							player stands on it in order to force them into the arena!</h2>
+						<h1 style="page-break-before:always; ">Final Level Design Result
+						</h1>
+						<p>While we weren’t able to solve every issue we had with our level during our short 3 month
+							total development cycle over the summer, in the end I think my team succeeded in creating an
+							enjoyable level that has a good amount of back and forth intersecting paths, clear
+							sightlines, and an interesting layout. </p>
+						<h1 style="page-break-before:always; ">Systems Design &amp; Scripting</h1>
+						<h2>Bloom: Tome of Power</h2>
+						<h1 style="page-break-before:always; ">Weapon.cs</h1>
+						<h2>Unity has a certain type of asset, a ScriptableObject, which can hold preset data and be
+							used throughout code. It’s a very handy system that allows you to easily define several
+							different types of objects without having to change any code in order to have those
+							variations. </h2>
+						<h2>For the Bloom FPS prototype, I elected to use SO’s to store data related to Weapons,
+							including their name, what prefab object to spawn as their projectile, what color they
+							should turn the spell VFX, and what image to use as their User Interface Icon. This made it
+							very easy to create several new weapons, and allowed me to create 4 different weapons just
+							for the proof of concept build!</h2>
+						<h1 style="page-break-before:always; ">WeaponManager.cs</h1>
+						<h2>Here we have the weapon manager script I created for the prototype. This system was intended
+							to make setup very easy, and mostly event oriented. </h2>
+						<h2>The modularity of the functions plays into that significantly (we have AddWeapon,
+							SetCurrentWeapon, HasWeapon, and so forth). This, along with the fact that all these
+							functions are public, allows for easy callbacks through public Unity events that can be set
+							through the inspector.</h2>
+						<h1 style="page-break-before:always; ">AnimationEvents.cs</h1>
+						<h2>While a very simple script, AnimationEvents.cs is something that I wrote once, and have been
+							using all the time since then. I created it so that I could have a list of events to fire
+							off and call whatever method I liked from a Unity Animation. I’ve been able to use it for
+							everything: from making enemies stop moving when they attack, to playing sound effects, to
+							creating a player dash.</h2>
+						<h1 style="page-break-before:always; ">Enemy Design #1</h1>
+						<h2>Bloom: Tome of Power</h2>
+						<h1 style="page-break-before:always; ">Spider Enemy Design</h1>
+						<h2>Inspired by <i>Half Life</i>’s headcrab, this enemy is intended to run out from the shadows,
+							scare the player by jumping up towards their face, and then scurrying off into the darkness
+							to hide, before repeating the process all over again. They were intended to force the player
+							to explore the map, and the hiding spots were often placed next to key items or pickups in
+							order to reward the player if they decided to give chase.</h2>
+						<h1 style="page-break-before:always; ">Spider Enemy AI</h1>
+						<h2>The spider AI script I wrote is rather simple. It runs towards the player, jumps up and
+							attacks, then runs off to a random hiding location, and hides for HideTime seconds, before
+							repeating it all over again.</h2>
+						<h1 style="page-break-before:always; ">Random Location Manager</h1>
+						<h2>In order to make things a bit simpler (and in case we wanted to expand out to having several
+							enemies that might try to run away from the player) I created a simple prefab &amp; script
+							that have several hiding spot transforms as children that can be placed throughout the
+							level. When an enemy AI requests it, it assigns them a random hiding spot that the enemy AI
+							can then start moving towards.</h2>
+						<h1 style="page-break-before:always; ">Game Release Link:</h1>
+						<h2><a
+								href="https://wolverinesoft-studio.itch.io/bloom-tome-of-power"><u>https://wolverinesoft-studio.itch.io/bloom-tome-of-power</u></a>
+						</h2>
+						<h1 style="page-break-before:always; ">Enemy Design #2</h1>
+						<h2>Forgotten Forest VR (Project WIP)</h2>
+						<h1 style="page-break-before:always; ">Enemy Director AI Design</h1>
+						<h2>Much more recently, I’ve been working on a Virtual Reality Action Horror FPS with a 6 person
+							team. In this title, the player advances down a trail in a dark forest with creatures
+							running out from the darkness to attack them. We wanted to have a 60-40 split between
+							gunplay and horror/interaction moments, so for our MVP we decided to mainly focus on nailing
+							the gunplay and enemy AI. </h2>
+						<h2>As the player is going to be in a rather open forest, we wanted to make sure that they make
+							progress towards the level exit. To that end, I started to design an Enemy Director AI off
+							of the one used in <i>Left 4 Dead</i>, with rules that try to draw the player back onto the
+							trails, and pressure them to keep advancing. </h2>
+						<h2>Going off of this, we decided that, for at least the MVP, the enemies would behave similarly
+							to zombies as well.</h2>
+						<h1 style="page-break-before:always; ">Simple Zombie AI</h1>
+						<h2>Using the animator, animation events, and my animation event interface script, I created a
+							simple zombie AI. The animations each call a different animation event interface event,
+							which is wired up to various methods, such as changing the move speed, telling the chase
+							behavior whether or not it should chase, and playing sound effects. </h2>
+						<h2>In combination with the animator state machine, and some simple colliders triggering
+							animation parameters, we can have a fully animation event driven enemy AI, which allows for
+							us to tweak movement speed, attack duration, and other complex AI behaviors without ever
+							having to touch a line of code.</h2>
+						<h1 style="page-break-before:always; ">General Game Development Portfolio Site:</h1>
+						<h2><a href="https://voxlap.github.io/"><u>https://voxlap.github.io/</u></a></h2>
+					</body>
 				</div>
-			</div>
 		</section>
 
 		<!-- Footer -->
